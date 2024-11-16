@@ -49,7 +49,7 @@ Você pode [acessar o código fonte do projeto](cole o link aqui) ou [baixá-lo]
 
 ## Desenvolvedores
 
-| [<img src="https://avatars.githubusercontent.com/u/37356058?v=4](https://avatars.githubusercontent.com/u/171989995?v=4" width=115><br><sub>Jad Martins de Lima</sub>](https://github.com/Jadmartins936)
+| [<img src="https://avatars.githubusercontent.com/u/171989995?v=4" width=115><br><sub>Jad Martins de Lima</sub>](https://github.com/Jadmartins936)
 
 
 
