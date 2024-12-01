@@ -1,0 +1,7 @@
+.content{
+    font-family: var(--titulo);
+    font-weight: 300;
+    font-size: 1.4em;
+    font-style: normal;
+    margin: 20%;
+}

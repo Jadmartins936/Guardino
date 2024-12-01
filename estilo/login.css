@@ -1,0 +1,38 @@
+main{
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+}
+label{
+    display: block;
+    margin: 6px;
+}
+#username{
+    background-image: url('../icon/user\ icons/user.svg');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) center;
+ 
+}
+#cidade{
+    background-image: url('../icon/user\ icons/pin.svg');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) center;
+}
+#email{
+    background-image: url('../icon/user\ icons/mail.svg');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) center;
+}
+#pass{
+    background-image: url('../icon/user\ icons/lock.svg');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) center;
+}
+select{
+    width: 25.38vw;
+}
+#pass2{
+    background-image: url('../icon/user\ icons/lock2.svg');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) center;
+}
