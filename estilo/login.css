@@ -1,12 +1,40 @@
+
 main{
-    display: flex;
-    justify-content: center;
-    background-color: aqua;
+    padding-bottom: 120px;
+    background-image: linear-gradient(to right,#1ed3d3, #19647e);
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
 }
+
+.alinhamento{
+    
+    display: grid;
+    grid-template-columns: 150px 1fr; 
+    gap: 10px; 
+    margin-bottom: 10px;
+}
+
+form{
+    border-radius: 0 30px 30px;
+    background-color: #f3f8f66b;
+    padding: 1% 8% 1% 8%;
+    box-shadow: 0 6px 6px #00000042;
+    width: 40vw;
+    position: relative;
+    z-index: 1;
+    float: left;
+}
+
 label{
-    display: block;
-    margin: 6px;
+    text-align: left;
 }
+
+input, select{
+    width: 100%;
+}
+
+
 #username{
     background-image: url('../icon/user\ icons/user.svg');
     background-repeat: no-repeat;
@@ -18,6 +46,10 @@ label{
     background-repeat: no-repeat;
     background-position: calc(100% - 10px) center;
 }
+#estado{
+    width: 104.8%;
+}
+
 #email{
     background-image: url('../icon/user\ icons/mail.svg');
     background-repeat: no-repeat;
@@ -28,11 +60,74 @@ label{
     background-repeat: no-repeat;
     background-position: calc(100% - 10px) center;
 }
-select{
-    width: 25.38vw;
-}
+
 #pass2{
     background-image: url('../icon/user\ icons/lock2.svg');
     background-repeat: no-repeat;
     background-position: calc(100% - 10px) center;
 }
+
+form > h1{
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    color: var(--cor-fonte)
+}
+
+button{
+    width: 90%;
+    display: inline-block;
+    font-family: var(--subtitulo);
+    background-color: var(--laranja);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+button:hover{
+    transform: translateY(-5px);
+    text-decoration: underline;
+}
+
+form > .bloco{
+    display: flex;
+    justify-content: space-between;
+    width: 104.8%;
+    
+}
+
+.moldura {
+    position: relative; 
+    float: right; 
+    clear: right; /* Garante que cada moldura fique abaixo da anterior */
+    width: 20vw;
+    height: 40vh;
+    margin:60px 30px 10px 4px;
+    background-color: var(--azul-claro);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.moldura2{
+    position: relative; 
+    float: right; 
+    clear: right; /* Garante que cada moldura fique abaixo da anterior */
+    width: 20vw;
+    height: 40vh;
+    margin:60px 180px 10px 4px;
+    background-color: var(--azul-claro);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+  
+
+  .foto {
+    max-width: 90%; 
+    max-height: 90%; 
+
+  }
+  
+

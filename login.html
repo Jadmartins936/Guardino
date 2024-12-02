@@ -13,22 +13,26 @@
         <script src="dino.js" type="text/javascript" defer></script>
     </head>
 <body>
+
     <header>
         <nav>
-            <img id="logonav" src="icon/dinossauro.png" alt="icone de um dinossauro azul">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-            </ul>
+        <img id="logonav" src="icon/favicon/escclaro.svg" alt="icone de um dinossauro escudo branco com um coração no meio">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><div id="login"><a href="login.html">Login</a> <img src="icon/user icons/user2.svg" alt="símbolo de usuário"></div></li>
+        </ul>
         </nav>
     </header>
-    <main>
+
+    <main>   </main>
         <form action="POST">
+            <h1>Cadastre-se</h1>
+            <div class="alinhamento">
             <label for="username">Nome:</label>
-            <input type="text" id="username" name="username"> <br> <br>
+            <input type="text" id="username" name="username"> 
             <label for="cidade">Cidade:</label>
-            <input type="text" id="cidade" name="cidade"> <br> <br>
+            <input type="text" id="cidade" name="cidade"> 
         <label for="estado">Estado</label>
         <select id="estado" name="estado">
             <option value="">  - - </option>
@@ -59,17 +63,33 @@
             <option value="SP">SP</option>
             <option value="SE">SE</option>
             <option value="TO">TO</option>
-            </select> <br><br>
+            </select>  
         
             <label for="datanasc">Data de nascimento:</label>
-            <input type="date" id="datanasc" name="datanasc" required> <br> <br>
+            <input type="date" id="datanasc" name="datanasc" required> 
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required> <br> <br>
+            <input type="email" id="email" name="email" required> 
             <label for="pass">Senha:</label>
-            <input type="password" id="pass" name="pass" required> <br> <br>
-            <label for="pass2">Confirme sua senha:</label>
-            <input type="password" id="pass2" name="pass" required> <br> <br>
+            <input type="password" id="pass" name="pass" required> 
+            <label for="pass2">Confirme sua senha:</label>  
+            <input type="password" id="pass2" name="pass" required> 
+        </div>
+        <div class="bloco">
+        <button type="reset"> Limpar</button>
+        <button type="submit">Enviar</button> 
+        </div>
         </form>
-    </main>
+        <div class="moldura">
+            <img class="foto" src="img/dino/dinofeliz.png" alt="">
+        </div>
+        <div class="moldura2">
+            <img class="foto"  src="img/dino/dinodeoculos.png" alt="">
+        </div>
+     
+      
+ 
+    <footer>
+        
+    </footer>
 </body>
 </html>
