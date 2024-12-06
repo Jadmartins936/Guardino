@@ -9,3 +9,15 @@ window.addEventListener('scroll', () => {
         dino.classList.remove('dark');
     }
 });
+
+const comentarios = document.querySelectorAll('.comentario');
+
+comentarios.forEach(comentario => {
+    comentario.addEventListener('mouseover', () => {
+        comentario.style.backgroundColor = '#lightgray'; 
+    });
+
+    comentario.addEventListener('mouseout', () => {
+        comentario.style.backgroundColor = '#f0f0f0';
+    });
+});

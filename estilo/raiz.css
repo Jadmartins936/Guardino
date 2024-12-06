@@ -155,11 +155,46 @@ main > ul{
     box-shadow: 0px 3px 3px  rgba(0, 0, 0, 0.192);
     
 }
-footer{
-    background-color: var(--azul-escuro);
-   
+
+#rodape {
+    display: flex; /* Ativa o Flexbox */
+    justify-content: space-between; /* Espaçamento entre os itens */
+    align-items: flex-start; /* Alinha os itens no topo */
+    background-color: var(--azul-escuro); /* Fundo do rodapé, opcional */
+    padding: 10px;
+    
 }
-.lista-rodape, .lista-rodape > li, .lista-rodape > li > a{
-    background-color:rgb(212, 212, 212);
-    all: unset;
+
+.lista-rodape, .lista-rodape1, .lista-rodape2 {
+    list-style: none;
+    display: inline-block;
+    width: 420px;
+    height: 140px;
+    padding: 10px;
+    margin: 0; /* Remove margens externas para alinhamento perfeito */
+    box-sizing: border-box; /* Inclui padding no cálculo de largura/altura */
 }
+
+.lista-rodape2 {
+    margin-top: 0; /* Garante alinhamento com os outros elementos */
+    padding-left: 100px;
+}
+
+.lista-rodape > li, .lista-rodape1 > li, .lista-rodape2 > li {
+    color: var(--cor-fundo);
+    font-size: 0.9em;
+}
+
+.footer-h3 {
+    color: var(--cor-fundo);
+    font-family: var(--titulo);
+    margin-bottom: 10px;
+}
+
+.footer-p {
+    color: var(--cor-fundo);
+    font-family: var(--subtitulo);
+    font-size: 0.9em;
+}
+
+

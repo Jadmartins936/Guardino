@@ -1,7 +1,9 @@
-.content{
-    font-family: var(--titulo);
-    font-weight: 300;
+#content{
+    background-color: var(--cor-fundo);
+    padding: 20px;
+}
+#content > h1{
     font-size: 1.4em;
-    font-style: normal;
-    margin: 20%;
+    margin-top: 20px ;
+    margin-bottom: 20px ;
 }
