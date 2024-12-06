@@ -38,31 +38,52 @@
 }
 
 main{
-    background: linear-gradient(to bottom, #FFFFFF, #f3f8f6);
-    padding: 30px 10px 30px 0px;
+    background-color: transparent;
+    padding: 30px 0px 0px 0px;
     min-height: calc(100vh - 60px); /* Garante que o conteúdo preencha a tela, menos o espaço do footer */
-    margin-bottom: 0; /* Sem margem extra no final */
     box-sizing: border-box;
 }
 
 main > p, main > h2, main > h3{
-    color: var(--cor-texto);
-    margin-bottom: 30px;
-    margin-left: 30px;
+    margin-left: 70px;
+   
+}
+.intro{
+    margin: 20px 140px 30px 120px;
+    padding: 30px 30px 30px 78px;
+    border-radius: 16px;
+    background-color: #f3f8f6e3;
+    box-shadow: 5px 6px 8px 4px rgba(0, 0, 0, 0.1); 
+    font-family: var(--subtitulo);
+    border: 1.5px solid #1ed3d3;
+}
+.circulo{
+    margin-left: 10px;
+    position: relative;
+    float: left;
+    height: 16vh;
+    width: 8vw;
+    border-radius: 50%;
+    background-image: linear-gradient(to top,#1ed3d3, #19647e);
+    box-shadow: 5px 4px 6px rgba(0, 0, 0, 0.1); 
+    margin-top: 30px;   
+    margin-left: 76px;
+}
+.circulo > img{
+    height: 8vh;
+    width: 4vw;
+    margin: 23%;
+   
 }
 
 .vantagens{
     background-image: linear-gradient(to right,#1ed3d3, #19647e);
     padding: 20px;
     width: 100vw;
-    height: 40vh;
+    height: 42vh;
     display: flex;
     justify-content: center;
-   
-}
-.vantagens > h3{
-    font-family: var(--titulo);
-    font-size: 1.4em;
+    margin-bottom: 30px;
 }
 
 .topicos{
@@ -72,14 +93,13 @@ main > p, main > h2, main > h3{
     margin: 10px;
     position: relative; 
     width: 20vw;
-    display: block;
     align-items: center;
     justify-content: center;
     padding: 16px;
     box-shadow: 5px 4px 6px rgba(0, 0, 0, 0.1);
-    animation: go-back 1.4s;
-   
+    animation: go-back 3s;
 }
+
 @keyframes go-back {
     from {
       transform: translateX(200px);
@@ -88,27 +108,59 @@ main > p, main > h2, main > h3{
       transform: translateX(0);
     }
   } 
+
 .topicos > p{
     color: var(--cor-texto);
     list-style-type: none;
     font-size: 0.92em;
     margin-bottom: 10px;
 }
+
 .emoji{
     margin-left: 40%;
-
 }
 
 .dados{
     display: flex;
     justify-content: center;
+    padding: 20px;
+    width: 100vw;
+    margin-bottom: 30px;
+    /*background-color: #1ed3d3;*/
+}
+.dados > img{
+    border-radius: 30px;
+    height: 34vh;
+    margin: 10px;
+    position: relative; 
+    width: 20vw;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    
+}
+.titulo-graficos{
+    margin: 10px;
+    padding: 10px 120px 10px 160px;
+    justify-content: center;
+}
+.titulo-graficos > h3, .relatos > h3{
+display: flex;
+justify-content: center;
+font-size: 1.4em;
+font-family: var(--titulo);
+}
+.relatos{
+    background-color: var(--cor-fundo);
+    padding: 10px;
+    height: 40vh;
+}
+.comentario > img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 
-.dados > img{
-    width:30%;
-    height: 30%;
-    margin: 10px;
-}
 
 
 
