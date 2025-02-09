@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guardino - sua ferramenta de proteção digital</title>
+    <!--Link do favicon-->
+    <link rel="shortcut icon" href="icon/dinossauro.png" type="image/x-icon" />
+    <!--Link do CSS-->
+    <link rel="stylesheet" href="estilo/raiz.css" />
+    <link rel="stylesheet" href="estilo/login.css" />
+    <!--Link do JS-->
+    <script src="dino.js" type="text/javascript" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img
+          id="logonav"
+          src="icon/favicon/escclaro.svg"
+          alt="icone de um dinossauro escudo branco com um coração no meio"
+        />
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li>
+            <div id="login">
+              <a href="login.html">Login</a>
+              <img src="icon/user icons/user2.svg" alt="símbolo de usuário" />
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main></main>
+    <form>
+      <h1>Cadastro de usuários</h1>
+      <div class="alinhamento">
+        <label for="usernameadm">Nome do usuário:</label>
+        <input type="text" id="usernameadm" name="usernameadm" />
+        <label for="emailadm">Email:</label>
+        <input type="email" id="emailadm" name="emailadm" required />
+      </div>
+      <div class="bloco">
+        <button type="reset">Limpar</button>
+        <button type="submit" onclick="cadastrarUsuario()">Enviar</button>
+       
+      </div>
+      <input type="text" id="search" placeholder="Pesquisar..." onkeyup="pesquisarUsuarios()">
+      <ul id="listaUsuarios"></ul>
+      <button onclick="excluirTudo()">Excluir Todos</button>
+    </form>
+   
+    <div class="moldura">
+      <img class="foto" src="img/dino/dinofeliz.png" alt="" />
+    </div>
+    <div class="moldura2">
+      <img class="foto" src="img/dino/dinodeoculos.png" alt="" />
+    </div>
+    
+  </body>
+  
+      <script>
+         document.addEventListener("DOMContentLoaded", carregarUsuarios);
+
+            function cadastrarUsuario() {
+                const name = document.getElementById("usernameadm").value.trim();
+                const email = document.getElementById("emailadm").value.trim();
+
+                const usuario = {
+                    name,
+                    email,
+                    date: new Date().toLocaleString()
+                };
+
+            let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+            usuarios.push(usuario);
+            localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+                document.getElementById("usernameadm").value = "";
+                document.getElementById("emailadm").value = "";
+                carregarUsuarios();
+            }
+
+            function carregarUsuarios() {
+                const lista = document.getElementById("listaUsuarios");
+                lista.innerHTML = "";
+                let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+                usuarios.forEach((user, index) => {
+                    let li = document.createElement("li");
+                    li.innerHTML = `${user.date} - ${user.name} (${user.email}) 
+                                    <button onclick="Limpaitem(${index})" id = "Limpaitem">X</button>`;
+                    lista.appendChild(li);
+                });
+            }
+
+            function pesquisarUsuarios() {
+                const searchValue = document.getElementById("search").value.toLowerCase();
+                let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+                const lista = document.getElementById("listaUsuarios");
+                lista.innerHTML = "";
+
+                usuarios.filter(user => user.name.toLowerCase().includes(searchValue) || user.email.toLowerCase().includes(searchValue))
+                    .forEach((user, index) => {
+                        let li = document.createElement("li");
+                        li.innerHTML = `${user.date} - ${user.name} (${user.email}) 
+                                        <button onclick="Limpaitem(${index})" id = "Limpaitem">X</button>`;
+                        lista.appendChild(li);
+                    });
+            }
+
+            function Limpaitem(index) {
+                let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+                usuarios.splice(index, 1);
+                localStorage.setItem("usuarios", JSON.stringify(usuarios));
+                carregarUsuarios();
+            }
+
+            function excluirTudo() {
+                localStorage.removeItem("usuarios");
+                carregarUsuarios();
+            }
+
+      </script>
+  </body>
+  </html>
+</html>

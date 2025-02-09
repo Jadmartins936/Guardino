@@ -129,5 +129,32 @@ form > .bloco{
     max-height: 90%; 
 
   }
+
+    .botoeslimpar{
+        
+        width: 40;
+        display: inline-block;
+        justify-content: end;
+    }
+     #listaUsuarios{
+         list-style: none;
+         flex-direction: column;
+         padding: 10px; 
+         display: flex;
+         
+     }
+     #listaUsuarios > li{
+    
+    font-family: var(--texto);
+    vertical-align: middle;
+ 
+  }
+  #Limpaitem{
+    margin-top: auto;
+    width: 40px; 
+    background-color: #19647e; 
+    color: white;
+ 
+  }
   
 
