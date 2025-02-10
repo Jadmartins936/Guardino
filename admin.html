@@ -34,24 +34,26 @@
     </header>
 
     <main></main>
-    <form>
-      <h1>Cadastro de usuários</h1>
-      <div class="alinhamento">
-        <label for="usernameadm">Nome do usuário:</label>
-        <input type="text" id="usernameadm" name="usernameadm" />
-        <label for="emailadm">Email:</label>
-        <input type="email" id="emailadm" name="emailadm" required />
-      </div>
-      <div class="bloco">
-        <button type="reset">Limpar</button>
-        <button type="submit" onclick="cadastrarUsuario()">Enviar</button>
-       
-      </div>
-      <input type="text" id="search" placeholder="Pesquisar..." onkeyup="pesquisarUsuarios()">
-      <ul id="listaUsuarios"></ul>
-      <button onclick="excluirTudo()">Excluir Todos</button>
-    </form>
-   
+    <section class="form">
+        <form>
+            <h1>Cadastro de usuários</h1>
+            <div class="alinhamento">
+                <label for="usernameadm">Nome do usuário:</label>
+                <input type="text" id="usernameadm" name="usernameadm" />
+                <label for="emailadm">Email:</label>
+                <input type="email" id="emailadm" name="emailadm" required />
+            </div>
+            <div class="bloco">
+                <button type="reset">Limpar</button>
+                <button type="submit" onclick="cadastrarUsuario()">Enviar</button>
+            
+            </div>
+        
+        </form>
+        <input type="text" id="search" placeholder="Pesquisar..." onkeyup="pesquisarUsuarios()">
+        <ul id="listaUsuarios"></ul>
+        <button onclick="excluirTudo()">Excluir Todos</button>
+    </section>
     <div class="moldura">
       <img class="foto" src="img/dino/dinofeliz.png" alt="" />
     </div>
